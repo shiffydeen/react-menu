@@ -14,9 +14,12 @@ function App() {
       setMenuItems(items)
       return
     }
+      
     const newMenu = items.filter(item => item.category === category);
     setMenuItems(newMenu);
   }
+
+  
 
   return (
     <main>

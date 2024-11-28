@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 
 export default function Categories({items, filterItems}) {
 
-    const buttons = ['all', ...new Set(items.map(item => item.category))]
+    const otherCategories = new Set(items.map(item => item.category));
+
+
+    const buttons = ['all', ...otherCategories]
 
     return (
-
-        
         <div className="btn-container">
           {buttons.map((button, index) => {
             return (
